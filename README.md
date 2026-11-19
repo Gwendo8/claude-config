@@ -1,5 +1,7 @@
 # claude-config
 
+**[Voir la carte de ma config](https://gwendo8.github.io/claude-config/carte.html)** : règles, outils, mémoire et gardiens, en un coup d'œil. Elle est refaite toute seule à chaque synchro.
+
 Sauvegarde privée de ma mémoire Claude Code et de mes petits outils. Le dossier `~/.claude` lui-même est ce dépôt, mais seuls quelques fichiers sont envoyés (liste dans `.gitignore`) : jamais les conversations, le cache ou les plugins téléchargés.
 
 | Fichier | Contenu |
@@ -10,6 +12,8 @@ Sauvegarde privée de ma mémoire Claude Code et de mes petits outils. Le dossie
 | `menage-memoire.json` | Date du dernier `/menage-memoire` |
 | `projects/*/memory/` | Mémoire automatique de chaque projet (sauf les fichiers `prive-*.md`, gardés sur le Mac) |
 | `sync/synchro.sh` | Script de synchronisation, avec son garde-fou |
+| `sync/carte.mjs` | Génère `carte.html`, la carte de ce dépôt (lancé par `synchro.sh`) |
+| `carte.html` | La carte, publiée par GitHub Pages (`.nojekyll` : fichiers servis tels quels) |
 | `outils/mp3.zsh` | Ma commande terminal `mp3 "lien"` (YouTube → mp3) |
 
 Jamais de mot de passe, de jeton ni d'info confidentielle d'entreprise dans ces fichiers.

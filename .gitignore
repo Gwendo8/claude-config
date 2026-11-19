@@ -3,6 +3,8 @@
 /*
 !/.gitignore
 !/README.md
+!/carte.html
+!/.nojekyll
 !/CLAUDE.md
 !/erreurs.md
 !/settings.json

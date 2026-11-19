@@ -30,7 +30,15 @@ verifier() {
   rm -f "$MOTIFS"
 }
 
+# Carte du dépôt (carte.html, en ligne via GitHub Pages) : refaite avant chaque enregistrement.
+# Node peut manquer dans le PATH d'un hook (installé par nvm) : on le cherche aussi dans ~/.nvm.
+carte() {
+  NODE=$(command -v node || ls -d "$HOME"/.nvm/versions/node/*/bin/node 2>/dev/null | tail -1)
+  [ -n "$NODE" ] && "$NODE" "$DOSSIER/sync/carte.mjs" >/dev/null 2>&1
+}
+
 enregistrer() {
+  carte
   git add -A >/dev/null 2>&1
   verifier
   if [ -n "$BLOQUE" ]; then

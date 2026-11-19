@@ -1,0 +1,210 @@
+<!doctype html>
+<!-- Fichier généré par sync/carte.mjs à chaque synchro : ne pas le modifier à la main. -->
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Carte de claude-config</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;800&family=Inter:wght@400;500;600&display=swap">
+<style>
+/* Carte mentale : claude-config au centre, deux branches de chaque côté, reliées par des courbes. */
+:root {
+  --bg: #F5F6FA; --carte: #FFFFFF; --texte: #1B2133; --doux: #5D6579; --trait: #DDE1EA;
+  --regles: #E2683C; --outils: #1C9A6C; --memoire: #2F6BD8; --gardiens: #7B55C9;
+  --titre: "Outfit", "Avenir Next", system-ui, sans-serif;
+  --corps: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #11141C; --carte: #1A1F2B; --texte: #E8EBF2; --doux: #9AA2B4; --trait: #2B3242;
+    --regles: #F2875F; --outils: #3CC492; --memoire: #6A97F0; --gardiens: #A585EC; color-scheme: dark; }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--texte); font: 15px/1.5 var(--corps); padding: 28px max(16px, 3vw) 48px; }
+header { max-width: 1280px; margin: 0 auto 8px; text-align: center; }
+header p { margin: 4px 0 0; color: var(--doux); }
+.carte { position: relative; max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: minmax(0, 1fr) 220px minmax(0, 1fr); gap: 28px; align-items: center; }
+svg.liens { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; overflow: visible; }
+svg.liens path { fill: none; stroke-width: 4; stroke-linecap: round; opacity: .55; }
+.colonne { display: flex; flex-direction: column; gap: 28px; min-width: 0; position: relative; z-index: 1; }
+.centre { display: flex; justify-content: center; position: relative; z-index: 1; }
+.coeur { width: 190px; height: 190px; border-radius: 50%; background: var(--texte); color: var(--bg); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; box-shadow: 0 0 0 10px var(--carte), 0 0 0 11px var(--trait); }
+.coeur strong { font: 800 26px/1.1 var(--titre); }
+.coeur small { margin-top: 6px; font-size: 13px; opacity: .8; }
+.branche { --c: var(--texte); background: var(--carte); border: 1px solid var(--trait); border-radius: 18px; padding: 16px 18px 14px; }
+.b-regles { --c: var(--regles); } .b-outils { --c: var(--outils); } .b-memoire { --c: var(--memoire); } .b-gardiens { --c: var(--gardiens); }
+.bulle { margin: 0; display: inline-flex; align-items: center; gap: 10px; background: var(--c); color: #fff; font: 700 20px/1 var(--titre); padding: 9px 16px; border-radius: 999px; }
+.bulle .nb { background: rgba(255,255,255,.25); border-radius: 999px; font-size: 13px; padding: 3px 8px; }
+.intro { margin: 8px 0 10px; color: var(--doux); font-size: 14px; }
+ul { list-style: none; margin: 0; padding: 0 0 0 14px; border-left: 3px solid color-mix(in srgb, var(--c) 45%, transparent); display: flex; flex-direction: column; gap: 4px; }
+li { position: relative; }
+li::before { content: ""; position: absolute; left: -14px; top: 19px; width: 11px; height: 3px; background: color-mix(in srgb, var(--c) 45%, transparent); }
+summary { list-style: none; cursor: pointer; display: flex; flex-direction: column; padding: 7px 34px 7px 10px; border-radius: 10px; position: relative; }
+summary::-webkit-details-marker { display: none; }
+summary::after { content: "+"; position: absolute; right: 10px; top: 6px; font: 700 18px/1 var(--titre); color: var(--c); transition: transform .2s; }
+details[open] summary::after { transform: rotate(45deg); }
+summary:hover, summary:focus-visible { background: color-mix(in srgb, var(--c) 10%, transparent); outline: none; }
+summary:focus-visible { box-shadow: 0 0 0 2px var(--c); }
+.nom { font: 700 16px/1.3 var(--titre); }
+.court { color: var(--doux); font-size: 14px; }
+.plus { padding: 2px 10px 10px; display: flex; flex-direction: column; gap: 8px; }
+.plus p { margin: 0; font-size: 14px; }
+ul.detail { border: 0; padding: 0 0 0 18px; list-style: disc; gap: 2px; font-size: 14px; }
+ul.detail li::before { display: none; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.tags span { font-size: 12px; border: 1px solid var(--trait); border-radius: 999px; padding: 1px 9px; color: var(--doux); }
+footer { max-width: 1280px; margin: 28px auto 0; text-align: center; color: var(--doux); font-size: 13px; }
+@media (max-width: 860px) {
+  .carte { grid-template-columns: minmax(0, 1fr); }
+  .centre { order: -1; }
+  .coeur { width: 140px; height: 140px; }
+  .coeur strong { font-size: 26px; }
+  svg.liens { display: none; }
+}
+@media (prefers-reduced-motion: reduce) { summary::after { transition: none; } }
+</style>
+</head>
+<body>
+<header>
+  <p>Clique sur un élément pour lire ce qu'il fait.</p>
+</header>
+<main class="carte" id="carte">
+  <svg class="liens" id="liens" aria-hidden="true"></svg>
+  <div class="colonne">
+    <section class="branche b-regles" data-branche="regles">
+      <h2 class="bulle"><span>Mes règles</span><span class="nb">11</span></h2>
+      <p class="intro">Ce que Claude doit faire dans tous mes projets.</p>
+      <ul>
+        <li><details>
+          <summary><span class="nom">Langue et pédagogie</span><span class="court">Toujours répondre en français.</span></summary>
+          <div class="plus"><ul class="detail"><li>Toujours répondre en français.</li><li>J'apprends l'IA en même temps : expliquer le pourquoi, simplement.</li><li>Donner ton avis franc : signaler de toi-même les défauts et les risques de mes idées, à chaque fois, sans attendre que je le demande.</li></ul><div class="tags"><span>CLAUDE.md</span><span>3 règles</span></div></div>
+        </details></li>
+        <li><details>
+          <summary><span class="nom">Travailler ensemble</span><span class="court">Choix importants et conflits : expose le problème, les options et ton avis, puis on décide ensemble.</span></summary>
+          <div class="plus"><ul class="detail"><li>Choix importants et conflits : expose le problème, les options et ton avis, puis on décide ensemble.</li><li>Quand on conçoit quelque chose ensemble, reste sur le sujet en cours tant que je n'ai pas dit que c'est bon : finis par une question sur ce sujet, plutôt que de…</li><li>Consommation de tokens : parle de quota (ce qui me bloque jusqu'au reset).</li><li>Quand tu corriges un fichier de consignes, écris directement la bonne règle, en positif.</li></ul><div class="tags"><span>CLAUDE.md</span><span>4 règles</span></div></div>
+        </details></li>
+        <li><details>
+          <summary><span class="nom">Git</span><span class="court">Commits et PR à mon nom seul, sans mention de Claude.</span></summary>
+          <div class="plus"><ul class="detail"><li>Commits et PR à mon nom seul, sans mention de Claude (réglé aussi dans ~/.claude/settings.json).</li><li>Commit à chaque étape terminée, plutôt que tout à la fin.</li><li>Push : je les fais moi-même, donne-moi la commande.</li></ul><div class="tags"><span>CLAUDE.md</span><span>3 règles</span></div></div>
+        </details></li>
+        <li><details>
+          <summary><span class="nom">Bases de données</span><span class="court">Lecture seule sur toutes les bases, sans aucun moyen de contournement.</span></summary>
+          <div class="plus"><ul class="detail"><li>Lecture seule sur toutes les bases (local, dev, prod…), sans aucun moyen de contournement (psql compris).</li><li>Pour une base de prod, recommande en plus un compte PostgreSQL en lecture seule.</li></ul><div class="tags"><span>CLAUDE.md</span><span>2 règles</span></div></div>
+        </details></li>
+        <li><details>
+          <summary><span class="nom">Mon ordinateur</span><span class="court">La commande code ouvre Cursor.</span></summary>
+          <div class="plus"><ul class="detail"><li>La commande code ouvre Cursor.</li><li>Pour convertir une vidéo ou une playlist YouTube en mp3, j'ai la commande terminal mp3 &quot;lien&quot; (fonction dans ~/.claude/outils/mp3.zsh, chargée par ~/.zshrc,…</li></ul><div class="tags"><span>CLAUDE.md</span><span>2 règles</span></div></div>
+        </details></li>
+        <li><details>
+          <summary><span class="nom">Noter tes erreurs</span><span class="court">Dès que tu découvres une erreur que tu as faite : dis-le-moi en une phrase et suis le skill erreurs d'ia-kit.</span></summary>
+          <div class="plus"><ul class="detail"><li>Dès que tu découvres une erreur que tu as faite (corrigée seul, trouvée par un test, une relecture, un audit ou plus tard dans le projet) : dis-le-moi en une…</li></ul><div class="tags"><span>CLAUDE.md</span><span>1 règle</span></div></div>
+        </details></li>
+        <li><details>
+          <summary><span class="nom">Format des réponses</span><span class="court">Découper la réponse en parties, chacune avec un petit titre, séparées par un grand trait horizontal.</span></summary>
+          <div class="plus"><ul class="detail"><li>Découper la réponse en parties, chacune avec un petit titre, séparées par un grand trait horizontal (---).</li><li>Écrire pour être compris à tout niveau : mots simples, phrases courtes, chaque terme technique expliqué en quelques mots à sa première apparition, un exemple…</li></ul><div class="tags"><span>CLAUDE.md</span><span>2 règles</span></div></div>
+        </details></li>
+        <li><details>
+          <summary><span class="nom">Repérer ce qui mérite d'être automatisé</span><span class="court">Une même consigne ou tâche revient → proposer une commande / skill.</span></summary>
+          <div class="plus"><ul class="detail"><li>Une même consigne ou tâche revient (≈ 3e fois) → proposer une commande / skill.</li><li>Quelque chose doit se faire *à chaque fois*, sans oubli possible → proposer un hook.</li><li>Une tâche longue et à part encombre la conversation → proposer un agent.</li><li>Plusieurs tâches indépendantes en parallèle → proposer une équipe / workflow (plus coûteux, seulement si ça vaut le coup).</li></ul><div class="tags"><span>CLAUDE.md</span><span>4 règles</span></div></div>
+        </details></li>
+        <li><details>
+          <summary><span class="nom">Déléguer aux sous-agents</span><span class="court">Recherche large → sous-agent sur Haiku.</span></summary>
+          <div class="plus"><ul class="detail"><li>Recherche large (trouver des fichiers, collecter ou extraire des données dans beaucoup de fichiers) → sous-agent sur Haiku (agent ia-kit:chercheur).</li><li>Comprendre du code, croiser des sources, réflexion, choix et décision → modèle principal de la session, à partir de ce que le chercheur a rendu.</li><li>Travail d'un agent spécialiste ia-kit (tous, y compris ceux ajoutés plus tard ; règle détaillée dans regles/qui-fait-le-travail.md du plugin) : la réflexion et…</li><li>Seuil : déléguer dès que la tâche demande de lire plus d'environ 1 000 lignes sans les modifier.</li><li>Vérifier soi-même tout résultat de sous-agent qui fonde une décision importante.</li></ul><div class="tags"><span>CLAUDE.md</span><span>5 règles</span></div></div>
+        </details></li>
+        <li><details>
+          <summary><span class="nom">Erreurs à ne pas refaire</span><span class="court">Vérifier avant d'affirmer ou de demander : avant d'annoncer une cause, un fait ou une impossibilité, le vérifier.</span></summary>
+          <div class="plus"><ul class="detail"><li>Vérifier avant d'affirmer ou de demander : avant d'annoncer une cause, un fait ou une impossibilité, le vérifier.</li><li>Langue des réponses : écrire chaque message à l'utilisatrice en français, titres compris, y compris les comptes rendus d'agents relayés et les messages…</li><li>Design, page ou visuel : avant de construire, montrer 2 ou 3 formes concrètes (esquisse, exemple) et laisser l'utilisatrice choisir le format, le style et…</li><li>Réponse ou retour ambigu (« de gauche à droite », « je n'aime pas le sombre »…) : reformuler ce que j'ai compris avec le résultat concret (ex.</li><li>Avant chaque commit : relancer git status et git diff --cached --stat juste avant, et vérifier que seuls les fichiers voulus sont préparés (un agent ou une…</li></ul><div class="tags"><span>CLAUDE.md</span><span>5 règles</span></div></div>
+        </details></li>
+        <li><details>
+          <summary><span class="nom">Journal des erreurs</span><span class="court">Les erreurs de Claude vues une fois. Si une erreur revient, elle devient une règle.</span></summary>
+          <div class="plus"><ul class="detail"><li>20 erreurs notées pour l'instant.</li><li>Rempli par le skill erreurs du plugin ia-kit.</li></ul><div class="tags"><span>erreurs.md</span></div></div>
+        </details></li>
+      </ul>
+    </section>
+    <section class="branche b-outils" data-branche="outils">
+      <h2 class="bulle"><span>Outils</span><span class="nb">4</span></h2>
+      <p class="intro">Mes commandes et les plugins activés.</p>
+      <ul>
+        <li><details>
+          <summary><span class="nom">mp3</span><span class="court">Convertit une vidéo ou une playlist YouTube en mp3.</span></summary>
+          <div class="plus"><ul class="detail"><li>À taper : mp3 &quot;lien&quot;  (plusieurs liens possibles)</li></ul><div class="tags"><span>commande du terminal</span><span>outils/mp3.zsh</span></div></div>
+        </details></li>
+        <li><details>
+          <summary><span class="nom">Plugin ia-kit</span><span class="court">Mon plugin : chef de projet, agents spécialistes et leurs outils.</span></summary>
+          <div class="plus"><ul class="detail"><li>Source : gwendo8.</li></ul><div class="tags"><span>plugin</span><span>settings.json</span></div></div>
+        </details></li>
+        <li><details>
+          <summary><span class="nom">Plugin frontend-design</span><span class="court">Plugin activé dans Claude Code.</span></summary>
+          <div class="plus"><ul class="detail"><li>Source : claude-code-plugins.</li></ul><div class="tags"><span>plugin</span><span>settings.json</span></div></div>
+        </details></li>
+        <li><details>
+          <summary><span class="nom">Plugin impeccable</span><span class="court">Plugin activé dans Claude Code.</span></summary>
+          <div class="plus"><ul class="detail"><li>Source : impeccable.</li></ul><div class="tags"><span>plugin</span><span>settings.json</span></div></div>
+        </details></li>
+      </ul>
+    </section>
+  </div>
+  <div class="centre"><div class="coeur" id="coeur"><strong>claude-config</strong><small>ma config Claude Code</small></div></div>
+  <div class="colonne">
+    <section class="branche b-memoire" data-branche="memoire">
+      <h2 class="bulle"><span>Mémoire</span><span class="nb">2</span></h2>
+      <p class="intro">Ce que Claude a retenu, projet par projet.</p>
+      <ul>
+        <li><details>
+          <summary><span class="nom">Projet ia</span><span class="court">8 souvenirs que Claude relit à chaque conversation dans ce projet.</span></summary>
+          <div class="plus"><ul class="detail"><li>Plugin ia-kit</li><li>Plugin lu depuis le dépôt</li><li>Projets perso &amp; hébergement</li><li>Préfère les commandes</li><li>README proactif</li><li>Décisions squelette</li><li>MCP pgadmin : avant la prod</li><li>Test Windows à faire</li></ul><div class="tags"><span>mémoire</span><span>projects/…ia/memory/</span></div></div>
+        </details></li>
+        <li><details>
+          <summary><span class="nom">Projet platine</span><span class="court">7 souvenirs que Claude relit à chaque conversation dans ce projet.</span></summary>
+          <div class="plus"><ul class="detail"><li>Commits par étape</li><li>Notes du serveur maison</li><li>Platine : rappels de fin</li><li>Déploiement par workflows</li><li>Montrer les alternatives</li><li>Rappel mise à jour yt-dlp</li><li>Panne YouTube Music</li></ul><div class="tags"><span>mémoire</span><span>projects/…platine/memory/</span></div></div>
+        </details></li>
+      </ul>
+    </section>
+    <section class="branche b-gardiens" data-branche="gardiens">
+      <h2 class="bulle"><span>Gardiens</span><span class="nb">3</span></h2>
+      <p class="intro">Ils travaillent tout seuls, au bon moment, sans qu’on le demande.</p>
+      <ul>
+        <li><details>
+          <summary><span class="nom">Au début de chaque conversation</span><span class="court">Envoie ce qui attend, récupère la dernière version.</span></summary>
+          <div class="plus"><ul class="detail"><li>Script : sync/synchro.sh (mode debut).</li></ul><div class="tags"><span>hook</span><span>SessionStart</span></div></div>
+        </details></li>
+        <li><details>
+          <summary><span class="nom">À la fin de chaque conversation</span><span class="court">Enregistre et envoie les changements de la conversation.</span></summary>
+          <div class="plus"><ul class="detail"><li>Script : sync/synchro.sh (mode fin).</li></ul><div class="tags"><span>hook</span><span>SessionEnd</span></div></div>
+        </details></li>
+        <li><details>
+          <summary><span class="nom">Garde-fou de la synchro</span><span class="court">Bloque l'envoi sur GitHub si un mot interdit apparaît, car le dépôt est public.</span></summary>
+          <div class="plus"><ul class="detail"><li>La liste des mots reste sur le Mac : sync/mots-interdits.txt, jamais synchronisée.</li><li>Claude montre le passage en cause à la conversation suivante.</li></ul><div class="tags"><span>sync/synchro.sh</span></div></div>
+        </details></li>
+      </ul>
+    </section>
+  </div>
+</main>
+<footer>Carte refaite automatiquement à chaque synchro, à partir des fichiers du dépôt. Les fichiers privés n'y figurent pas.</footer>
+<script>
+(function () {
+  var carte = document.getElementById('carte'), svg = document.getElementById('liens'), coeur = document.getElementById('coeur');
+  function dessiner() {
+    var base = carte.getBoundingClientRect(), c = coeur.getBoundingClientRect();
+    var cx = c.left + c.width / 2 - base.left, cy = c.top + c.height / 2 - base.top;
+    var traits = '';
+    document.querySelectorAll('.branche').forEach(function (b) {
+      var bulle = b.querySelector('.bulle').getBoundingClientRect();
+      var gauche = bulle.left + bulle.width / 2 < cx + base.left;
+      var x = (gauche ? b.getBoundingClientRect().right : b.getBoundingClientRect().left) - base.left;
+      var y = bulle.top + bulle.height / 2 - base.top;
+      var mx = (cx + x) / 2;
+      var couleur = getComputedStyle(b).getPropertyValue('--c');
+      traits += '<path d="M' + cx + ' ' + cy + ' C' + mx + ' ' + cy + ' ' + mx + ' ' + y + ' ' + x + ' ' + y + '" stroke="' + couleur + '"/>';
+    });
+    svg.innerHTML = traits;
+  }
+  dessiner();
+  if (window.ResizeObserver) new ResizeObserver(dessiner).observe(carte);
+  window.addEventListener('resize', dessiner);
+})();
+</script>
+</body>
+</html>
