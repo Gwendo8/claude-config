@@ -1,0 +1,7 @@
+- [Commits par étape](commits-par-etape.md) — commit à chaque étape validée / fonctionnalité, fait par Claude, jamais de push sans demande
+- [Notes du serveur maison](notes-serveur-maison.md) — fichier de suivi du mini PC serveur dans ~/Documents/serveur-maison/, à lire et tenir à jour
+- [Platine : rappels de fin](platine-rappels-fin.md) — renommage du dossier, compte admin, Jamendo, Brevo, couleurs : à rappeler une fois le front fini
+- [Déploiement par workflows](automatisation-cote-mac.md) — serveur maison : déploiement par workflows GitHub en fin de projet, ni script sur le serveur ni skill côté Mac
+- [Montrer les alternatives](montrer-les-alternatives.md) — aux choix d'architecture, nommer l'option plus avancée et la laisser choisir
+- [Rappel mise à jour yt-dlp](rappel-mise-a-jour-yt-dlp.md) — import YouTube de Platine : rappeler sudo yt-dlp -U (serveur) / brew upgrade yt-dlp (Mac)
+- [Panne YouTube Music](panne-youtube-music.md) — recherche « Musique » en panne : mettre youtubei.js à jour sur le Mac, commit, déployer (jamais npm i sur le serveur)

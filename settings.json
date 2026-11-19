@@ -1,0 +1,57 @@
+{
+  "env": {
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
+  },
+  "attribution": {
+    "commit": "",
+    "pr": ""
+  },
+  "model": "opus",
+  "enabledPlugins": {
+    "ia-kit@gwendo8": true,
+    "frontend-design@claude-code-plugins": true,
+    "impeccable@impeccable": true,
+    "frontend-design@anthropic-plugin-directory": true
+  },
+  "extraKnownMarketplaces": {
+    "claude-code-plugins": {
+      "source": {
+        "source": "github",
+        "repo": "anthropics/claude-code"
+      }
+    },
+    "impeccable": {
+      "source": {
+        "source": "github",
+        "repo": "pbakaus/impeccable"
+      }
+    }
+  },
+  "tui": "fullscreen",
+  "theme": "dark",
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "sh \"$HOME/.claude/sync/synchro.sh\" debut",
+            "timeout": 30
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "sh \"$HOME/.claude/sync/synchro.sh\" fin",
+            "timeout": 30
+          }
+        ]
+      }
+    ]
+  }
+}

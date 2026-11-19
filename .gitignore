@@ -1,0 +1,24 @@
+# Dépôt claude-config : on ignore tout ~/.claude, sauf la liste ci-dessous.
+# (~/.claude contient aussi les conversations, le cache, les plugins… à ne pas envoyer.)
+/*
+!/.gitignore
+!/README.md
+!/CLAUDE.md
+!/erreurs.md
+!/settings.json
+!/menage-memoire.json
+!/sync/
+!/outils/
+/sync/derniere-erreur.txt
+/sync/mots-interdits.txt
+
+# Mémoire des projets : seulement le dossier memory/ de chaque projet (pas les conversations).
+!/projects/
+/projects/*/*
+!/projects/*/memory/
+
+# Fichiers système du Mac
+.DS_Store
+
+# Mémoire privée : reste sur ce Mac, jamais envoyée (le dépôt est public).
+/projects/*/memory/prive-*.md
