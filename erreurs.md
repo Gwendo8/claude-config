@@ -19,6 +19,7 @@ Format : - date | projet | mots-clés | ce qui s'est passé
 
 ## Code
 
+- 2026-11-21 | Mijote | React, formulaire, fenêtre, tests | agent front : un formulaire (sélecteur d'aliment) dans une fenêtre ouverte à l'intérieur du formulaire de la recette ; l'envoi remontait au formulaire parent (React fait remonter les évènements), donc « Relier » envoyait toute la recette ; aucun test ne cliquait jusqu'au bout, et je l'ai commité sans l'essayer ; trouvé par l'utilisatrice.
 - 2026-11-20 | Mijote | transaction, Sequelize | agent back : `inTransaction(async () => …)` sans passer `{ transaction }` aux requêtes, donc transaction inutile (`cacheProducts`), repéré par l'agent suivant.
 - 2026-11-18 | ia | node, nvmrc, version, PATH | Dans les lanceurs hooks/node.sh et .husky/path.sh, j'ai fait passer le Node de Homebrew avant nvm sans regarder le .nvmrc : le pre-commit de Platine a tourné en Node 23.7, la version qui casse ses tests ; quand un script choisit une version d'outil, partir de celle que fixe le projet (.nvmrc).
 - 2026-11-16 | Platine | icône, bouton, interface | le haut-parleur du volume était un simple dessin, pas un bouton : un collègue cliquait pour remettre le son, rien ne se passait (tout pictogramme qui invite au clic doit être un vrai bouton)
