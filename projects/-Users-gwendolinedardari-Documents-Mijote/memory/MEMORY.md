@@ -1,1 +1,2 @@
 - [Aperçus téléphone et PC](apercus-pc-et-mobile.md) — toujours montrer les deux formats dans un aperçu de design
+- [Même logique que Platine](meme-logique-que-platine.md) — reprendre la logique de Platine dans chaque appli sauf avis contraire

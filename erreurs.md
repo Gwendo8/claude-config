@@ -7,6 +7,8 @@ Format : - date | projet | mots-clés | ce qui s'est passé
 ## Git
 
 ## Tests et vérifications
+
+- 2026-11-20 | Mijote | front, maquettes, relecture d'agent | Bloc d'écrans accepté et commité sans comparaison écran par écran avec les maquettes Figma (l'agent l'avait signalé, le brief ne l'exigeait pas) : connexion mal faite, profil PC en colonne centrée façon mobile
 - 2026-11-19 | ia (claude-config) | vérification visuelle, quota | Pour regarder une page locale dans le navigateur de test, affiché toute la page encodée en base64 dans la conversation (≈26 Ko) au lieu de la vérifier une fois en ligne : quota consommé pour rien
 - 2026-11-13 | platine | tests, heure, dépendance au temps | L'outil de connexion des tests e2e attendait « Bonjour » alors que l'accueil dit « Bonsoir » après 18 h : presque tous les tests échouaient le soir ; un test ne doit jamais dépendre de l'heure à laquelle on le lance.
 - 2026-11-13 | platine | tests, suppression de fonctionnalité, oubli | En retirant Jamendo, j'ai oublié son test e2e, qui échouait ensuite ; en retirant une fonctionnalité, chercher aussi ses tests (y compris e2e) et les retirer.

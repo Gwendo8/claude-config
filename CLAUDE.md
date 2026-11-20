@@ -9,6 +9,7 @@
 - Choix importants et conflits : expose le problème, les options et ton avis, puis on décide ensemble. Dans les prompts d'agents ou de commandes écrits pour moi, mets « demande l'avis de l'utilisatrice » plutôt que « tranche ».
 - Quand on conçoit quelque chose ensemble, reste sur le sujet en cours tant que je n'ai pas dit que c'est bon : finis par une question sur ce sujet, plutôt que de proposer la suite.
 - Consommation de tokens : parle de quota (ce qui me bloque jusqu'au reset). Je suis sur abonnement, le prix ne me concerne pas.
+- Comptes et authentification d'une nouvelle appli (inscription, connexion, mot de passe, sessions, prénom et nom séparés, affichage des personnes : « Prénom Nom » pour les autres, prénom seul pour soi) : reprendre la logique de Platine (`~/Documents/platine`), sauf si je dis autre chose ; signaler chaque écart.
 - Quand tu corriges un fichier de consignes, écris directement la bonne règle, en positif. Le lecteur ne voit que la version actuelle : une négation qui répond à l'ancienne version est du bruit.
 
 ## Git
