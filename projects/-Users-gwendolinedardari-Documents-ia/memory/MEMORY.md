@@ -1,6 +1,6 @@
 ## Le projet
 - [Plugin ia-kit](ia-kit-plugin.md) — projet ia = plugin Claude Code, dépôt public Gwendo8/ia, carte en ligne via GitHub Pages
-- [Plugin lu depuis le dépôt](plugin-charge-depuis-depot.md) — ia-kit portée user, source = dépôt local ; le cache 0.1.0 est un vestige
+- [Plugin lu depuis le dépôt](plugin-charge-depuis-depot.md) — ia-kit portée user, source = dépôt local, propre à chaque machine ; jamais se fier à un cache
 - [Projets perso & hébergement](projets-perso-hebergement.md) — apps faites avec ia-kit = perso (pas pour son employeur), hébergées sur son propre serveur Linux
 
 ## Façon de construire le plugin

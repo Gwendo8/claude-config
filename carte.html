@@ -74,7 +74,7 @@ footer { max-width: 1280px; margin: 28px auto 0; text-align: center; color: var(
   <svg class="liens" id="liens" aria-hidden="true"></svg>
   <div class="colonne">
     <section class="branche b-regles" data-branche="regles">
-      <h2 class="bulle"><span>Mes règles</span><span class="nb">12</span></h2>
+      <h2 class="bulle"><span>Mes règles</span><span class="nb">11</span></h2>
       <p class="intro">Ce que Claude doit faire dans tous mes projets.</p>
       <ul>
         <li><details>
@@ -98,12 +98,8 @@ footer { max-width: 1280px; margin: 28px auto 0; text-align: center; color: var(
           <div class="plus"><ul class="detail"><li>La commande code ouvre Cursor.</li><li>Pour convertir une vidéo ou une playlist YouTube en mp3, j'ai la commande terminal mp3 &quot;lien&quot; (fonction dans ~/.claude/outils/mp3.zsh, chargée par ~/.zshrc,…</li></ul><div class="tags"><span>CLAUDE.md</span><span>2 règles</span></div></div>
         </details></li>
         <li><details>
-          <summary><span class="nom">Noter tes erreurs</span><span class="court">Dès que tu découvres une erreur que tu as faite : dis-le-moi en une phrase et suis le skill erreurs d'ia-kit.</span></summary>
-          <div class="plus"><ul class="detail"><li>Dès que tu découvres une erreur que tu as faite (corrigée seul, trouvée par un test, une relecture, un audit ou plus tard dans le projet) : dis-le-moi en une…</li></ul><div class="tags"><span>CLAUDE.md</span><span>1 règle</span></div></div>
-        </details></li>
-        <li><details>
-          <summary><span class="nom">Écrire en mémoire</span><span class="court">Quand tu notes un fait en mémoire, indique sa source et sa certitude : confirmé par moi, vérifié dans tel fichier ou…</span></summary>
-          <div class="plus"><ul class="detail"><li>Quand tu notes un fait en mémoire, indique sa source et sa certitude : confirmé par moi (avec la date), vérifié dans tel fichier ou telle commande, ou supposé.</li><li>Mémorise seulement ce qui vient de moi ou ce que tu as vérifié toi-même.</li><li>Pour une info qui a déjà sa source quelque part (fichier de notes, README, config), note où la trouver plutôt que de la recopier : une seule source ne peut pas…</li></ul><div class="tags"><span>CLAUDE.md</span><span>3 règles</span></div></div>
+          <summary><span class="nom">Mémoire</span><span class="court">Dès que tu découvres une erreur que tu as faite : dis-le-moi en une phrase et suis le skill erreurs d'ia-kit.</span></summary>
+          <div class="plus"><ul class="detail"><li>Dès que tu découvres une erreur que tu as faite (corrigée seul, trouvée par un test, une relecture, un audit ou plus tard dans le projet) : dis-le-moi en une…</li><li>Quand tu notes un fait en mémoire, indique sa source et sa certitude : confirmé par moi (avec la date), vérifié dans tel fichier ou telle commande, ou supposé.</li><li>Mémorise seulement ce qui vient de moi ou ce que tu as vérifié toi-même.</li><li>Pour une info qui a déjà sa source quelque part (fichier de notes, README, config), note où la trouver plutôt que de la recopier : une seule source ne peut pas…</li></ul><div class="tags"><span>CLAUDE.md</span><span>4 règles</span></div></div>
         </details></li>
         <li><details>
           <summary><span class="nom">Format des réponses</span><span class="court">Découper la réponse en parties, chacune avec un petit titre, séparées par un grand trait horizontal.</span></summary>
@@ -114,16 +110,16 @@ footer { max-width: 1280px; margin: 28px auto 0; text-align: center; color: var(
           <div class="plus"><ul class="detail"><li>Une même consigne ou tâche revient (≈ 3e fois) → proposer une commande / skill.</li><li>Quelque chose doit se faire *à chaque fois*, sans oubli possible → proposer un hook.</li><li>Une tâche longue et à part encombre la conversation → proposer un agent.</li><li>Plusieurs tâches indépendantes en parallèle → proposer une équipe / workflow (plus coûteux, seulement si ça vaut le coup).</li></ul><div class="tags"><span>CLAUDE.md</span><span>4 règles</span></div></div>
         </details></li>
         <li><details>
-          <summary><span class="nom">Déléguer aux sous-agents</span><span class="court">Recherche large → sous-agent sur Haiku.</span></summary>
-          <div class="plus"><ul class="detail"><li>Recherche large (trouver des fichiers, collecter ou extraire des données dans beaucoup de fichiers) → sous-agent sur Haiku (agent ia-kit:chercheur).</li><li>Comprendre du code, croiser des sources, réflexion, choix et décision → modèle principal de la session, à partir de ce que le chercheur a rendu.</li><li>Travail d'un agent spécialiste ia-kit (tous, y compris ceux ajoutés plus tard ; règle détaillée dans regles/qui-fait-le-travail.md du plugin) : la réflexion et…</li><li>Seuil : déléguer dès que la tâche demande de lire plus d'environ 1 000 lignes sans les modifier.</li><li>Vérifier soi-même tout résultat de sous-agent qui fonde une décision importante.</li></ul><div class="tags"><span>CLAUDE.md</span><span>5 règles</span></div></div>
+          <summary><span class="nom">Déléguer aux sous-agents</span><span class="court">Recherche large → agent ia-kit:chercheur.</span></summary>
+          <div class="plus"><ul class="detail"><li>Recherche large (trouver des fichiers, collecter des données dans beaucoup de fichiers, plus d'environ 1 000 lignes à lire sans les modifier) → agent…</li><li>Comprendre, croiser, décider : toujours dans la conversation, à partir de ce que le chercheur a rendu.</li><li>Avant de lancer un agent spécialiste ia-kit, comparer son modèle (ligne model:) à celui de la conversation : même modèle → tout faire soi-même ; agent moins…</li></ul><div class="tags"><span>CLAUDE.md</span><span>3 règles</span></div></div>
         </details></li>
         <li><details>
-          <summary><span class="nom">Erreurs à ne pas refaire</span><span class="court">Vérifier avant d'affirmer ou de demander : avant d'annoncer une cause, un fait ou une impossibilité, le vérifier.</span></summary>
-          <div class="plus"><ul class="detail"><li>Vérifier avant d'affirmer ou de demander : avant d'annoncer une cause, un fait ou une impossibilité, le vérifier.</li><li>Langue des réponses : écrire chaque message à l'utilisatrice en français, titres compris, y compris les comptes rendus d'agents relayés et les messages…</li><li>Design, page ou visuel : avant de construire, montrer 2 ou 3 formes concrètes (esquisse, exemple) et laisser l'utilisatrice choisir le format, le style et…</li><li>Réponse ou retour ambigu (« de gauche à droite », « je n'aime pas le sombre »…) : reformuler ce que j'ai compris avec le résultat concret (ex.</li><li>Avant chaque commit : relancer git status et git diff --cached --stat juste avant, et vérifier que seuls les fichiers voulus sont préparés (un agent ou une…</li></ul><div class="tags"><span>CLAUDE.md</span><span>5 règles</span></div></div>
+          <summary><span class="nom">Erreurs à ne pas refaire</span><span class="court">Vérifier avant d'affirmer ou de demander : vérifier dans la réalité avant d'annoncer une cause, un fait ou une…</span></summary>
+          <div class="plus"><ul class="detail"><li>Vérifier avant d'affirmer ou de demander : vérifier dans la réalité (fichier, commande, message d'erreur, documentation, retours d'autres développeurs) avant…</li><li>Langue : chaque message en français, titres et comptes rendus d'agents compris ; relire la première ligne.</li><li>Visuel : avant de construire un design ou une page, montrer 2 ou 3 formes concrètes et me laisser choisir ; tout aperçu et toute vérification se font en…</li><li>Ce que j'ai dit, ce que tu en déduis : reformuler un retour ambigu avec le résultat concret et attendre mon « oui » ; séparer ce que j'ai dit de ce que tu en…</li><li>Proposer une option : seulement si tu es prêt à la réaliser, en annonçant ses limites tout de suite.</li><li>Avant chaque commit : relancer git status et git diff --cached --stat, et ne garder que les fichiers voulus (un agent ou une autre conversation a pu en…</li></ul><div class="tags"><span>CLAUDE.md</span><span>6 règles</span></div></div>
         </details></li>
         <li><details>
           <summary><span class="nom">Journal des erreurs</span><span class="court">Les erreurs de Claude vues une fois. Si une erreur revient, elle devient une règle.</span></summary>
-          <div class="plus"><ul class="detail"><li>22 erreurs notées pour l'instant.</li><li>Rempli par le skill erreurs du plugin ia-kit.</li></ul><div class="tags"><span>erreurs.md</span></div></div>
+          <div class="plus"><ul class="detail"><li>16 erreurs notées pour l'instant.</li><li>Rempli par le skill erreurs du plugin ia-kit.</li></ul><div class="tags"><span>erreurs.md</span></div></div>
         </details></li>
       </ul>
     </section>

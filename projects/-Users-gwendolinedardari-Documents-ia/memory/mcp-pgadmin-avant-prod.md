@@ -13,5 +13,5 @@ Décidé le 2026-10-20 : le MCP pgadmin d'ia-kit (plugins/ia-kit/mcp/pgadmin) su
 - un **masquage** des colonnes sensibles dans les résultats de `requete` (password, email, token… remplacés par `***`), pour ne pas envoyer les données de vrais utilisateurs à Claude.
 - probablement aussi gérer le SSL (paramètres de connexion pgAdmin), non traité pour l'instant.
 
-**Why:** elle prévoit d'ajouter des serveurs dev/staging/prod dans pgAdmin ; règle [[bdd-lecture-seule]].
+**Why:** elle prévoit d'ajouter des serveurs dev/staging/prod dans pgAdmin ; règle « Bases de données » du CLAUDE.md global.
 **How to apply:** dès qu'elle parle d'ajouter un serveur distant ou la prod, rappeler ces points avant de l'utiliser.
