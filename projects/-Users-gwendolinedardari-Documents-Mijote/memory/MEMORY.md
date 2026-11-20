@@ -1,0 +1,1 @@
+- [Aperçus téléphone et PC](apercus-pc-et-mobile.md) — toujours montrer les deux formats dans un aperçu de design

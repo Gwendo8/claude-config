@@ -14,7 +14,7 @@
 ## Git
 - Commits et PR à mon nom seul, sans mention de Claude (réglé aussi dans `~/.claude/settings.json`).
 - Commit à chaque étape terminée, plutôt que tout à la fin.
-- Push : je les fais moi-même, donne-moi la commande. Exceptions : le dépôt ia (Gwendo8/ia), où tu peux pousser ; et le dépôt privé claude-config (`~/.claude`), synchronisé tout seul par ses hooks à l'ouverture et à la fermeture des conversations.
+- Push : je les fais moi-même, donne-moi la commande. Exceptions : le dépôt ia (Gwendo8/ia), où tu peux pousser ; et le dépôt public claude-config (`~/.claude`), synchronisé tout seul (avec un garde-fou contre les mots interdits) par ses hooks à l'ouverture et à la fermeture des conversations.
 
 ## Bases de données
 - Lecture seule sur toutes les bases (local, dev, prod…), sans aucun moyen de contournement (psql compris). Seule exception : les bases de test. Pourquoi : je garde le contrôle de mes données.

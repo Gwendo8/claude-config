@@ -7,6 +7,7 @@ Format : - date | projet | mots-clés | ce qui s'est passé
 ## Git
 
 ## Tests et vérifications
+- 2026-11-19 | ia (claude-config) | vérification visuelle, quota | Pour regarder une page locale dans le navigateur de test, affiché toute la page encodée en base64 dans la conversation (≈26 Ko) au lieu de la vérifier une fois en ligne : quota consommé pour rien
 - 2026-11-13 | platine | tests, heure, dépendance au temps | L'outil de connexion des tests e2e attendait « Bonjour » alors que l'accueil dit « Bonsoir » après 18 h : presque tous les tests échouaient le soir ; un test ne doit jamais dépendre de l'heure à laquelle on le lance.
 - 2026-11-13 | platine | tests, suppression de fonctionnalité, oubli | En retirant Jamendo, j'ai oublié son test e2e, qui échouait ensuite ; en retirant une fonctionnalité, chercher aussi ses tests (y compris e2e) et les retirer.
 - 2026-11-13 | platine | tests, commit, enchaînement | J'ai enchaîné `npm test ; git commit` avec « ; » : un test (instable, sans lien) a échoué et le commit est parti quand même ; enchaîner avec « && » ou vérifier le résultat des tests avant de commiter.
@@ -31,6 +32,7 @@ Format : - date | projet | mots-clés | ce qui s'est passé
 - 2026-11-19 | appli-recettes | supposition, besoin, extrapolation | Idée d'appli (recettes, planning, journal des calories) : j'ai supposé que le journal additionnerait les plats du planning et présenté ce lien comme la valeur du projet, alors qu'elle n'en avait rien dit (journal rempli à la main, indépendant). Séparer ce qu'elle a dit de ce que j'en déduis, et poser la question avant de bâtir dessus.
 - 2026-11-19 | appli-recettes | rôle, livrable, demande, équipe ia-kit | Elle demandait un résumé à donner à son équipe ia-kit ; j'ai rédigé un cahier des charges complet, alors que c'est le rôle de /ia-kit:cahier-des-charges et du chef. Livrer exactement le format demandé, et laisser aux commandes et agents ia-kit le travail qui est le leur.
 - 2026-11-19 | mijote | sous-agent, même modèle, chef, délégation | En chef de projet, j'ai lancé l'agent ia-kit:bdd (Opus) alors que la conversation tourne aussi sur Opus ; la règle « même modèle → tout faire directement » (CLAUDE.md global, regles/qui-fait-le-travail.md) passe avant la section « Déléguer » de /chef : comparer les lignes model: avant de lancer un spécialiste.
+- 2026-11-20 | mijote | design, aperçu, PC, téléphone | Aperçus de design (pistes 7a à 7c) faits en téléphone seulement alors que l'utilisatrice avait déjà demandé de voir aussi le PC après les variantes 1 à 3 ; montrer téléphone et PC dès la première version de chaque aperçu.
 
 ## Autre
 - 2026-11-19 | mijote | processus, port, arrêt | Test du squelette serveur : j'ai envoyé « kill » à tout ce qui utilisait le port 3000 (dont deux processus inconnus présents avant mon test) sans regarder ce que c'était, et mon propre serveur est resté allumé. Arrêter seulement le processus que j'ai lancé (noter son numéro au lancement), et identifier tout processus inconnu avant d'y toucher.
