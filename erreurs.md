@@ -14,6 +14,7 @@ Format : - date | projet | mots-clés | ce qui s'est passé
 - 2026-11-13 | platine | tests, heure, dépendance au temps | L'outil de connexion des tests e2e attendait « Bonjour » alors que l'accueil dit « Bonsoir » après 18 h : presque tous les tests échouaient le soir ; un test ne doit jamais dépendre de l'heure à laquelle on le lance.
 - 2026-11-13 | platine | tests, suppression de fonctionnalité, oubli | En retirant Jamendo, j'ai oublié son test e2e, qui échouait ensuite ; en retirant une fonctionnalité, chercher aussi ses tests (y compris e2e) et les retirer.
 - 2026-11-13 | platine | tests, commit, enchaînement | J'ai enchaîné `npm test ; git commit` avec « ; » : un test (instable, sans lien) a échoué et le commit est parti quand même ; enchaîner avec « && » ou vérifier le résultat des tests avant de commiter.
+- 2026-11-22 | Mijote | tests, données de test, supposition | test écrit avec la donnée `skyr` prise pour une idée de plat d'après son nom, alors que c'était un aliment ; test en échec, corrigé après lecture des données du fichier
 
 ## Base de données
 
