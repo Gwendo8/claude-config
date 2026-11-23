@@ -6,7 +6,7 @@
     "commit": "",
     "pr": ""
   },
-  "model": "fable",
+  "model": "opus",
   "enabledPlugins": {
     "ia-kit@gwendo8": true,
     "frontend-design@claude-code-plugins": true,
