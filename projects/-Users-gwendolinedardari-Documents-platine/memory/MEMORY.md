@@ -5,3 +5,4 @@
 - [Montrer les alternatives](montrer-les-alternatives.md) — aux choix d'architecture, nommer l'option plus avancée et la laisser choisir
 - [Rappel mise à jour yt-dlp](rappel-mise-a-jour-yt-dlp.md) — import YouTube de Platine : rappeler sudo yt-dlp -U (serveur) / brew upgrade yt-dlp (Mac)
 - [Panne YouTube Music](panne-youtube-music.md) — recherche « Musique » en panne : mettre youtubei.js à jour sur le Mac, commit, déployer (jamais npm i sur le serveur)
+- [Hook projet-sync à régler](hook-projet-sync-a-ameliorer.md) — ne signaler que les fichiers de la conversation en cours ; accord du 2026-11-25, à faire après Proxmox
