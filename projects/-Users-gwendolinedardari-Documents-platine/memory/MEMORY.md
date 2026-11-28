@@ -5,3 +5,4 @@
 - [Montrer les alternatives](montrer-les-alternatives.md) — aux choix d'architecture, nommer l'option plus avancée et la laisser choisir
 - [Rappel mise à jour yt-dlp](rappel-mise-a-jour-yt-dlp.md) — import YouTube de Platine : rappeler la mise à jour (commande serveur dans NOTES-SERVEUR.md, brew upgrade yt-dlp sur le Mac)
 - [Panne YouTube Music](panne-youtube-music.md) — recherche « Musique » en panne : mettre youtubei.js à jour sur le Mac, commit, déployer (jamais npm i sur le serveur)
+- [Import Spotify : on garde le CSV](import-spotify-reste-csv.md) — API Spotify écartée (pas de Premium, 5 utilisateurs max), confirmé le 2026-11-28
