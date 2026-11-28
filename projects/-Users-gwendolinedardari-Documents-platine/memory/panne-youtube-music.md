@@ -13,7 +13,7 @@ Depuis le 2026-11-19, la recherche de « Ajouter de la musique » passe par YouT
 Réparation, à proposer directement à l'utilisatrice :
 1. Sur le Mac : `cd ~/Documents/platine/server && npm i youtubei.js@latest --save-exact`, puis tester une vraie recherche (`searchSongs`) et `npm test`.
 2. Commit (package.json + package-lock.json), elle fait `git push`.
-3. Sur le serveur : la ligne de mise à jour habituelle de [[notes-serveur-maison]] (git pull, npm ci, build, restart).
+3. Sur le serveur : la ligne de mise à jour notée dans [[notes-serveur-maison]] (depuis le 2026-11-26 : Docker, `git pull` puis `docker compose up -d --build`).
 
 **Why:** ne jamais lancer `npm i` directement sur le serveur : ça modifie package.json là-bas et bloque le prochain `git pull` (erreur de conseil faite puis corrigée le 2026-11-19).
 

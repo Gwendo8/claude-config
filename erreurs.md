@@ -7,6 +7,7 @@ Format : - date | projet | mots-clés | ce qui s'est passé
 ## Git
 
 ## Tests et vérifications
+- 2026-11-26 | serveur-maison (Proxmox) | vérification, pgrep, attente | attendu la fin d'une construction Docker avec `pgrep -f "docker compose build"` lancé par SSH : la commande se trouvait elle-même (le texte cherché est dans sa propre ligne de commande), donc « encore en cours » alors que c'était fini ; deux fois le même jour (ma boucle de suivi bloquée). Attendre un processus par son PID ou par un fichier témoin, pas par pgrep -f sur un texte présent dans la commande.
 
 - 2026-11-20 | Mijote | vérification visuelle, données imitées | Tableau des aliments vérifié seulement avec des noms courts imités (« Skyr ») : avec les vrais noms longs de Ciqual, les colonnes de chiffres s'écrasaient ; vérifier avec des données réalistes (textes longs, valeurs vides)
 - 2026-11-20 | Mijote | front, maquettes, relecture d'agent | Bloc d'écrans accepté et commité sans comparaison écran par écran avec les maquettes Figma (l'agent l'avait signalé, le brief ne l'exigeait pas) : connexion mal faite, profil PC en colonne centrée façon mobile
