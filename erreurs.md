@@ -20,6 +20,7 @@ Format : - date | projet | mots-clés | ce qui s'est passé
 ## Base de données
 
 ## Code
+- 2026-11-28 | serveur-maison (déploiement continu) | droits, chemin non testé, bash -e | deux erreurs dans mes propres scripts de déploiement, vues seulement au premier vrai lancement : fichier `.env` rendu lisible au robot sans ouvrir son dossier ; vérification qui lisait un fichier absent en prod (le script en `bash -e` s'arrêtait). Avant de livrer un script de déploiement, le jouer sous le vrai compte (`runuser -u github`) et dans chaque environnement (dev ET prod).
 
 - 2026-11-21 | Mijote | React, formulaire, fenêtre, tests | agent front : un formulaire (sélecteur d'aliment) dans une fenêtre ouverte à l'intérieur du formulaire de la recette ; l'envoi remontait au formulaire parent (React fait remonter les évènements), donc « Relier » envoyait toute la recette ; aucun test ne cliquait jusqu'au bout, et je l'ai commité sans l'essayer ; trouvé par l'utilisatrice. Revue le même jour : j'ai annoncé « corrigé » sur la foi d'un test jsdom seulement ; dans un vrai navigateur la page se rechargeait encore (formulaires imbriqués), corrigé ensuite par un portail ; un correctif d'interface se vérifie dans un vrai navigateur avant d'être annoncé.
 - 2026-11-20 | Mijote | transaction, Sequelize | agent back : `inTransaction(async () => …)` sans passer `{ transaction }` aux requêtes, donc transaction inutile (`cacheProducts`), repéré par l'agent suivant.
